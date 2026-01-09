@@ -1,0 +1,101 @@
+                                This is the first draft of the documentation (9/01/2026)
+
+
+    1/General Idea of the project
+        This website is made as a fun project. It's goal is to make me practice web language.
+        The website will act as an interface to put quest,edit them, finish them.
+        The reward are associated with them
+    2/Must have / Should have
+        Must have:
+            -login system
+            -create,edit,remove,accept,finish quest
+            -get create,edit,remove, reward,buy, claim them.
+
+        Should have:
+            -Nice visual
+            -Good code to wife standard
+            -Use Git as much as possible
+
+    3/Detail per page
+    On all page we have the top that allow to navigate to other pages and signout
+
+        Home:
+            -We have the actual number of token of the person
+            -His unclaimed reward
+            -The actual time
+            -The quest he has accepted
+                -We have to see the information of the quest
+                -A button to finish and get the reward of the quest
+                -A abord button to give up on the quest and put it back on the waiting list
+            -The quest that are waiting to be accepted
+                -All the information fothe quest
+                -Accept button that change his status to accepted by the user
+
+        Profile:
+            -Name of the user and its number of token
+            -Claimed reward (the one reademed IRL)
+            -Unclaimed reward (waiting to be reademed IRL)
+            -Finished quest
+                -all the information of the quest
+
+        Shop:
+            -Number of token
+            -Your reward is a list of the reward you put up to buy in the shop
+                -They can me edited or removed
+                - The plus button open create a new reward that you can submit at the end so the other can see it
+            -The Shop
+                -you can see the reward that other put and buy them if you have enough coint (They will be remove from the shop and your token will decrease by the amount of the price)
+
+        Quest:
+            -Your quest are the one you created and are active (accepted or waiting)
+                -you see all their information also their status(if accepted by whom)
+                -Edit button to edit the quest (Cannot be done if its already accepted)
+                -Remove button to remove it
+            -New quest
+                -Its a form to create a new quest
+                    -Title is text
+                    -Description is a longer text
+                    -reward can either be token(only number) or else and will open a dedicated input for it
+                    -end of is the day where it expire
+                    -reset button
+                    -Submit button
+
+
+    4/Database schematic
+
+        User:
+            -Id
+            -Login
+            -Password
+            -NbToken
+
+        User can create,edit,remove quests and rewards.
+        They can buy reward with tokens.
+        Claimed reward(When the action will be done IRL).
+        They must be loged in to go on the website.
+        They can signout.
+
+
+        Quest:
+            -Title (Max 16char)
+            -Description
+            -Prize(token or reward)
+            -Status (waiting,accepted,finished)
+            -Expiration day
+
+        Quest can be created,edited(by the creator only if its not accepted or finished), remove(by the creator only if its not accepted or finished).
+        They can be accepted by another user.It will remove it from the waiting list.
+        They can be finished by another user.It will give the price(reward or token) and go in the finished list of the one that finished it.
+
+        Rewards:
+            -Title(Max 16char)
+            -Description
+            -Status (claimed or waitingToBeClaimed)
+            -Price (int)
+
+        Rewards are created by users.
+        They can be on their own in the shop, where they can be bought for a number of token.
+        Or be associated to a Quest and so wont havea a price.
+        Reward can be possesed by a user and claimed by one.
+
+
