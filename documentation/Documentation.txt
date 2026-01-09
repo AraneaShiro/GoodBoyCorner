@@ -15,6 +15,7 @@
             -Nice visual
             -Good code to wife standard
             -Use Git as much as possible
+            -Use the less html as possible(for the fun of practice)
 
     3/Detail per page
     On all page we have the top that allow to navigate to other pages and signout
@@ -28,7 +29,7 @@
                 -A button to finish and get the reward of the quest
                 -A abord button to give up on the quest and put it back on the waiting list
             -The quest that are waiting to be accepted
-                -All the information fothe quest
+                -All the information of the quest
                 -Accept button that change his status to accepted by the user
 
         Profile:
@@ -40,7 +41,7 @@
 
         Shop:
             -Number of token
-            -Your reward is a list of the reward you put up to buy in the shop
+            -"Your reward" is a list of the reward you put up to buy in the shop
                 -They can me edited or removed
                 - The plus button open create a new reward that you can submit at the end so the other can see it
             -The Shop
@@ -55,7 +56,7 @@
                 -Its a form to create a new quest
                     -Title is text
                     -Description is a longer text
-                    -reward can either be token(only number) or else and will open a dedicated input for it
+                    -prize can either be token(only number) or a reward and will open a dedicated input for it
                     -end of is the day where it expire
                     -reset button
                     -Submit button
@@ -72,7 +73,7 @@
         User can create,edit,remove quests and rewards.
         They can buy reward with tokens.
         Claimed reward(When the action will be done IRL).
-        They must be loged in to go on the website.
+        They must be logged in to go on the website.
         They can signout.
 
 
@@ -82,10 +83,11 @@
             -Prize(token or reward)
             -Status (waiting,accepted,finished)
             -Expiration day
+            -CreationDay
 
         Quest can be created,edited(by the creator only if its not accepted or finished), remove(by the creator only if its not accepted or finished).
         They can be accepted by another user.It will remove it from the waiting list.
-        They can be finished by another user.It will give the price(reward or token) and go in the finished list of the one that finished it.
+        They can be finished by another user.It will give the prize(reward or token) and go in the finished list of the one that finished it.
 
         Rewards:
             -Title(Max 16char)
@@ -95,7 +97,7 @@
 
         Rewards are created by users.
         They can be on their own in the shop, where they can be bought for a number of token.
-        Or be associated to a Quest and so wont havea a price.
+        Or be associated to a Quest and so wont have a price.
         Reward can be possesed by a user and claimed by one.
 
 
